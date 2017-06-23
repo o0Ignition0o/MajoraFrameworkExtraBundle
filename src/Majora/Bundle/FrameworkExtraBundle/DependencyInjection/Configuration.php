@@ -42,6 +42,8 @@ class Configuration implements ConfigurationInterface
                 ->end()
                 ->arrayNode('agnostic_url_generator')
                     ->canBeEnabled()
+                ->arrayNode('no_base_url_generator')
+                    ->canBeEnabled()
                 ->end()
                 ->arrayNode('exception_listener')
                     ->canBeEnabled()
