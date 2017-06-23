@@ -51,6 +51,11 @@ class MajoraFrameworkExtraExtension extends Extension
             $loader->load('agnostic_url_generator.xml');
         }
 
+        // no base url generator
+        if (!empty($config['no_base_url_generator']['enabled'])) {
+            $loader->load('no_base_url_generator.xml');
+        }
+
         // exception listener
         if (!empty($config['exception_listener']['enabled'])) {
             $loader->load('exception_listener.xml');
